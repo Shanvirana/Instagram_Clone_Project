@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D47A1"
+    tools:context="com.example.dell.instagram_clone.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LogIn"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:textStyle="italic"
+                android:textSize="40dp"
+                android:textColor="#F5F5F5"
+                android:padding="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0D47A1"
+                android:orientation="horizontal"
+
+                >
+
+                <!-- Label -->
+                <!--TextView
+                    android:text="BASIC INTRODUCTION"
+                    android:textColor="#000"
+                    android:textSize="18dp"
+                    style="@style/CategoryStyle" />
+                < Input fields -->
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:paddingLeft="4dp"
+
+                    android:orientation="vertical">
+
+                    <!-- Name field -->
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="serif"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="#F5F5F5"
+                        android:textStyle="italic"
+                        android:inputType="textCapWords"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:textSize="30dp"
+                        android:padding="15dp"
+                        android:shadowRadius="2"
+                        android:hint="name*"
+                        android:textAllCaps="true"
+                        android:textColor="#D50000"
+                        android:textColorHint="#D50000" />
+
+                    <EditText
+                        android:id="@+id/pass"
+                        android:textColor="#D50000"
+                        android:shadowRadius="2"
+                        android:shadowDy="1"
+                        android:padding="15dp"
+                        android:hint="password*"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:textColorHint="#D50000"
+                        android:fontFamily="serif"
+                        android:textStyle="italic"
+                        android:shadowDx="1"
+                        android:textSize="30dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="15dp"
+                        android:backgroundTint="#F5F5F5"
+                        android:inputType="textPassword" />
+
+                    <Button
+                        android:id="@+id/login"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:textStyle="italic"
+                        android:textColor="#F5F5F5"
+                        android:fontFamily="serif"
+                        android:background="#FF1744"
+                        android:layout_marginRight="30dp"
+                        android:layout_width="match_parent"
+                        android:textSize="40dp"
+                        android:layout_height="wrap_content"
+                        android:text="Login" />
+
+                    <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Don't have acount yet"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:textStyle="italic"
+                    android:textSize="20dp"
+                    android:textColor="#F5F5F5"
+                    android:padding="8dp"/>
+                    <Button
+                        android:id="@+id/signup"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:textStyle="italic"
+                        android:textColor="#F5F5F5"
+                        android:fontFamily="serif"
+                        android:background="#FF1744"
+                        android:layout_marginRight="30dp"
+                        android:layout_width="match_parent"
+                        android:textSize="40dp"
+                        android:layout_height="wrap_content"
+                        android:text="SignUp" />
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="invisible"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

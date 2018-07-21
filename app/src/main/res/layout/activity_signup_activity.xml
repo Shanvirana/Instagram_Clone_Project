@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D47A1"
+    tools:context="com.example.dell.instagram_clone.signup_activity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Your Details"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:textStyle="italic"
+                android:textSize="40dp"
+                android:textColor="#F5F5F5"
+                android:padding="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0D47A1"
+                android:orientation="horizontal"
+
+                >
+
+                <!-- Label -->
+                <!--TextView
+                    android:text="BASIC INTRODUCTION"
+                    android:textColor="#000"
+                    android:textSize="18dp"
+                    style="@style/CategoryStyle" />
+                < Input fields -->
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:paddingLeft="4dp"
+
+                    android:orientation="vertical">
+
+                    <!-- Name field -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name   "
+                        android:textSize="25dp"
+                        android:textColor="#F5F5F5"
+                        android:fontFamily="serif"
+                        android:textStyle="italic"
+                        android:layout_marginLeft="19dp"
+                        android:layout_marginTop="9dp"/>
+
+                    <EditText
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="2dp"
+                        android:backgroundTint="#F5F5F5"
+                        android:inputType="textCapWords"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:hint="name*"
+                        android:textAllCaps="true"
+                        android:textColor="#D50000"
+                        android:textColorHint="#D50000" />
+
+                    <!-- Breed field -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Email  "
+                        android:fontFamily="serif"
+                        android:textSize="25dp"
+                        android:textStyle="italic"
+                        android:textColor="#F5F5F5"
+                        android:layout_marginLeft="19dp"
+                        android:layout_marginTop="9dp"/>
+                    <EditText
+                        android:id="@+id/email"
+                        android:textColor="#D50000"
+                        android:shadowRadius="2"
+                        android:shadowDy="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:textColorHint="#D50000"
+                        android:hint="email*"
+                        android:shadowDx="1"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="15dp"
+                        android:backgroundTint="#F5F5F5"
+                        android:inputType="textEmailAddress"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Password  "
+                        android:textSize="25dp"
+                        android:fontFamily="serif"
+                        android:textStyle="italic"
+                        android:textColor="#F5F5F5"
+                        android:layout_marginLeft="19dp"
+                        android:layout_marginTop="9dp"/>
+                    <EditText
+                        android:id="@+id/pass"
+                        android:textColor="#D50000"
+                        android:shadowRadius="2"
+                        android:shadowDy="1"
+                        android:hint="password*"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:textColorHint="#D50000"
+                        android:shadowDx="1"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="15dp"
+                        android:backgroundTint="#F5F5F5"
+                        android:inputType="textPassword"
+                        android:maxLength="10"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Gender  "
+                        android:textSize="25dp"
+                        android:fontFamily="serif"
+                        android:textStyle="italic"
+                        android:textColor="#F5F5F5"
+                        android:layout_marginLeft="19dp"
+                        android:layout_marginTop="9dp"/>
+                    <EditText
+                        android:id="@+id/gender"
+                        android:textColor="#D50000"
+                        android:shadowRadius="2"
+                        android:shadowDy="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:textColorHint="#D50000"
+                        android:shadowDx="1"
+                        android:hint="M / F"
+                        android:textAllCaps="true"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="15dp"
+                        android:backgroundTint="#F5F5F5"
+                        android:maxLength="1"/>
+                    <Button
+                        android:id="@+id/signup"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:textStyle="italic"
+                        android:textColor="#F5F5F5"
+                        android:fontFamily="serif"
+                        android:background="#FF1744"
+                        android:layout_marginRight="30dp"
+                        android:layout_width="match_parent"
+                        android:textSize="30dp"
+                        android:layout_height="wrap_content"
+                        android:text="SignUp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
