@@ -6,12 +6,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.parse.Parse;
+import com.parse.ParseUser;
+
 public class User_home extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_home);
+        Parse.initialize(this);
+        ParseUser currentUser=ParseUser.getCurrentUser();
+        String user=currentUser.getUsername().toString();
+        //.getUsername();
+        setTitle(user);
     }
 
     @Override

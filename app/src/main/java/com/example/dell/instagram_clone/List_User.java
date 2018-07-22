@@ -3,10 +3,8 @@ package com.example.dell.instagram_clone;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -15,8 +13,8 @@ import com.example.dell.instagram_clone.Model.Users;
 import com.parse.FindCallback;
 import com.parse.Parse;
 import com.parse.ParseException;
-import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +25,8 @@ public class List_User extends AppCompatActivity {
     ArrayAdapter<Users> usernamelistAdapter;
     List<Users> userList;
     ProgressBar progressbar;
+    ArrayList<String> usernames;
+    ArrayAdapter arrayAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +40,14 @@ public class List_User extends AppCompatActivity {
         usernamelistAdapter = new ArrayAdapter<Users>(this,R.layout.users,R.id.name_user,userList);
         viewUserListView.setAdapter(usernamelistAdapter);
         showUsers();
+        ParseUser currentUser=ParseUser.getCurrentUser();
+        String user=currentUser.getUsername().toString();
+        //.getUsername();
+        setTitle(user);
     }
     public void showUsers()
     {
+        /*
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Insta_Users");
         progressbar.setVisibility(View.VISIBLE);
         query.findInBackground(new FindCallback<ParseObject>() {
@@ -51,13 +56,14 @@ public class List_User extends AppCompatActivity {
                 if(e == null)
                 {
                     progressbar.setVisibility(View.INVISIBLE);
-                    userList.clear();
+                    //userList.clear();
                     for (ParseObject users : objects)
                     {
-                        Users users1 = new Users("abc@gmail.com","abc","female");
+                        Users users1 = new Users(users.getString("name"), users.getString("email"));
                         users.getString("name");
                         users.getString("email");
-                        users.getString("gender");
+                        //users.getString("password");
+                       // users.getString("gender");
                         userList.add(users1);
                     }
                     usernamelistAdapter.notifyDataSetChanged();
@@ -68,6 +74,33 @@ public class List_User extends AppCompatActivity {
                 }
             }
         });
+        */
+
+
+        usernames=new ArrayList<String>();
+        arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,usernames);
+        final ListView userList=(ListView)findViewById(R.id.list_user);
+
+        ParseQuery<ParseUser> query=ParseUser.getQuery();
+        query.whereNotEqualTo("username",ParseUser.getCurrentUser().getUsername());
+        query.addAscendingOrder("username");
+
+        query.findInBackground(new FindCallback<ParseUser>() {
+            @Override
+            public void done(List<ParseUser> objects, ParseException e) {
+                if(e==null){
+                    if(objects.size()>0){
+                        for(ParseUser user:objects){
+                            usernames.add(user.getUsername());
+                        }
+
+                        userList.setAdapter(arrayAdapter);
+                    }
+                }
+            }
+        });
+
+
     }
 
 

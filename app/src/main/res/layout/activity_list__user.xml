@@ -15,12 +15,13 @@
             android:layout_height="wrap_content"
             android:layout_margin="13dp"
             android:id="@+id/list_user"
-            android:background="#1E88E5">
+            android:background="#2196F3">
         </ListView>
         <ProgressBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:background="#FFF"
             android:visibility="invisible"
             android:id="@+id/progress_bar" />
 

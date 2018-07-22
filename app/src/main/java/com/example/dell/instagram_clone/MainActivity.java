@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.parse.LogInCallback;
+import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       // Parse.intialize(this);
+       Parse.initialize(this);
         setContentView(R.layout.activity_main);
         emailedit = (EditText) findViewById(R.id.email);
         passedit = (EditText) findViewById(R.id.pass);
@@ -28,13 +29,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         signup = (Button) findViewById(R.id.signup);
         login.setOnClickListener(this);
         signup.setOnClickListener(this);
-
+        setTitle("");
     }
     @Override
     public void onClick(View v) {
 
         if (v.getId() == R.id.login) {
 
+            //Toast.makeText(MainActivity.this," login ",Toast.LENGTH_SHORT).show();
             ParseUser.logInInBackground(emailedit.getText().toString(), passedit.getText().toString(), new LogInCallback() {
                 @Override
                 public void done(ParseUser user, ParseException e) {
@@ -45,12 +47,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         startActivity(i);
                     }
                     else{
-
-                        if(ParseUser.getCurrentUser()!=null){
+                        //Toast.makeText(MainActivity.this,"else login",Toast.LENGTH_SHORT).show();
+                        if(ParseUser.getCurrentUser() != null){
                             startActivity(new Intent(MainActivity.this,User_home.class));
+                           // Toast.makeText(MainActivity.this,"else login if",Toast.LENGTH_SHORT).show();
                         }
                         else
                         {
+                            //Toast.makeText(MainActivity.this,"else login else",Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(MainActivity.this,signup_activity.class));
                         }
                     }
@@ -61,7 +65,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else if (v.getId() == R.id.signup){
             startActivity(new Intent(this,signup_activity.class));
+
         }
     }
+
 }
 

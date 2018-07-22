@@ -6,12 +6,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.parse.ParseUser;
+
 public class Take_Photo extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_take__photo);
+        ParseUser currentUser=ParseUser.getCurrentUser();
+        String user=currentUser.getUsername().toString();
+        //.getUsername();
+        setTitle(user);
     }
 
 

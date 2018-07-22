@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
         android:id="@+id/use_home"
         app:showAsAction="always"
@@ -10,18 +11,16 @@
         android:id="@+id/camera"
         app:showAsAction="always"
         android:icon="@drawable/ic_linked_camera_black_24dp"
-        android:title="Home"></item>
+        android:title="camera"></item>
 
     <item
         android:id="@+id/list_use"
         app:showAsAction="always"
         android:icon="@drawable/ic_account_box_black_24dp"
-        android:title="Home"></item>
+        android:title="Users"></item>
     <item
         android:id="@+id/cancel"
         app:showAsAction="always"
         android:icon="@drawable/ic_cancel_black_24dp"
-        android:title="Home"></item>
-
-
+        android:title="logout"></item>
 </menu>

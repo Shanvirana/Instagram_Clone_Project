@@ -6,4 +6,13 @@
     android:layout_height="match_parent"
     tools:context="com.example.dell.instagram_clone.Take_Photo">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/list_image"/>
+
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

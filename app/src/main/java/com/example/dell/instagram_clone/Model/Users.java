@@ -5,12 +5,12 @@ package com.example.dell.instagram_clone.Model;
  */
 
 public class Users {
-    String useremail,username,password,email,gender;
-    public Users(String useremail,String username,String gender)
+    String useremail,username,password,email;
+    public Users(String useremail,String username)
     {
         this.useremail = useremail;
         this.username = username;
-        this.gender = gender;
+       // this.password = password;
     }
     public  void setUsername(String username)
     {
@@ -20,18 +20,19 @@ public class Users {
     {
         return username;
     }
-    public String getPassword()
+    /*public String getPassword()
     {
         return password;
-    }
+    }*/
     public String getEmail()
     {
         return email;
     }
-    public String getGender()
+   /* public String getGender()
     {
         return gender;
     }
+    */
     public String toString()
     {
         return this.getUsername();
