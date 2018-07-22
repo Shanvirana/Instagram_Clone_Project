@@ -13,6 +13,31 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/list_image"/>
+        <Button
+            android:id="@+id/upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="upload"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true" />
+        <Button
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true" />
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/perv_img"
+            android:layout_alignEnd="@id/upload"
+            android:layout_alignRight="@+id/upload"
+            android:layout_above="@id/upload"
+
+            />
 
     </RelativeLayout>
+
+
 </android.support.constraint.ConstraintLayout>

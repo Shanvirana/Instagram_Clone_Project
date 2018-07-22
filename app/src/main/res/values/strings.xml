@@ -3,4 +3,8 @@
     <string name="server_url">https://parseapi.back4app.com/</string>
     <string name="app_id">ma87V5bz2zcN3znrigYU61zlUpRwE4PAE5k7NyON</string>
     <string name="client_id">LZKjxmZYDP7rBTme8JjQELTJ5IOoVVfCSIXOtG1o</string>
+
+    <string name="title_activity_splash_screen">Splash_screen</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

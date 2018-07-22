@@ -5,6 +5,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-feature android:name="android.hardware.camera" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Splash_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,7 +35,8 @@
 
         <activity android:name=".User_home" />
         <activity android:name=".Take_Photo" />
-        <activity android:name=".List_User"></activity>
+        <activity android:name=".List_User" />
+        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>
